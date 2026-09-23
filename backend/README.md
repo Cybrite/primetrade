@@ -1,6 +1,8 @@
 # PrimeTrade Backend API
 
-RESTful API with JWT authentication and role-based access control.
+The backend is the Node.js and Express.js service in PrimeTrade's MERN stack. It provides a versioned REST API for authentication, user profiles, and task management, using MongoDB through Mongoose as its persistence layer.
+
+JWT authentication, bcrypt password hashing, request validation, role-based authorization, and centralized error handling protect the application. The modular route-controller-model structure keeps business logic maintainable, while Swagger documentation, rate limiting, Helmet, CORS, and request logging support secure API operation and future scalability.
 
 ## Quick Start
 

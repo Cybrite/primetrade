@@ -1,6 +1,8 @@
 # PrimeTrade Frontend
 
-React-based frontend for the PrimeTrade task management application with JWT authentication.
+The frontend is the React layer of PrimeTrade's MERN stack application. Built with Vite, it provides a responsive task management experience that communicates with the Node.js and Express.js REST API and MongoDB-backed data services.
+
+Users can register, log in, access protected routes, create and manage tasks, filter tasks by status, and receive clear success or error feedback. Axios-based service modules isolate API communication, while React components handle authentication flows, routing, dashboard interactions, and task forms.
 
 ## Quick Start
 

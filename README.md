@@ -1,6 +1,22 @@
-# PrimeTrade - Scalable REST API with Authentication & Role-Based Access
+# PrimeTrade - MERN Task Management Platform
 
-A full-stack application featuring a secure, scalable backend API with JWT authentication, role-based access control, and a React frontend for task management.
+PrimeTrade is a full-stack task management platform built with the MERN stack: MongoDB, Express.js, React, and Node.js. It combines a secure REST API with a responsive React dashboard, allowing authenticated users to create, organize, update, and track tasks from one application.
+
+The project demonstrates a production-minded separation between the frontend and backend, token-based authentication, role-based authorization, validated API requests, centralized error handling, and a MongoDB data layer designed for future scale.
+
+## Project Description
+
+### Backend
+
+The backend is a Node.js and Express.js REST API that acts as the application and security layer. It exposes versioned endpoints for authentication, user profiles, and task management, while Mongoose models connect the application to MongoDB. JWT authentication protects private routes, bcrypt securely hashes passwords, and role-based middleware distinguishes standard user permissions from admin-only operations such as task statistics.
+
+The backend is organized into routes, controllers, models, middleware, configuration, and utility modules. It also includes request validation, centralized error responses, rate limiting, Helmet security headers, CORS configuration, Morgan request logging, and Swagger/OpenAPI documentation.
+
+### Frontend
+
+The frontend is a React application built with Vite. It provides registration and login flows, protected routing, a task management dashboard, task creation and editing forms, status filtering, and responsive feedback for API operations. Axios centralizes communication with the Express API, while dedicated authentication and task service modules keep network logic separate from UI components.
+
+The React client stores and sends the JWT required for protected requests, manages the authenticated user experience, and presents task data through reusable components styled with custom CSS. Vite provides fast development feedback and optimized production builds.
 
 ## 🚀 Features
 
@@ -53,7 +69,7 @@ Create a `.env` file in the backend directory:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb+srv://harshtanishq2002_db_user:FcHAClWNONYHvetB@cluster0.w86isu1.mongodb.net/primetrade?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster>/<database>
 JWT_SECRET=your_super_secret_jwt_key_change_this_in_production_12345
 JWT_EXPIRE=7d
 NODE_ENV=development
